@@ -20,7 +20,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'Buid Docker Image'
-                    docker build -t abhishekf5/cicd-e2e:123 .
+                    docker build -t abhishekf5/cicd-e2e:123 /python-jenkins-argocd-k8s/
                     '''
                 }
             }
