@@ -20,7 +20,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'Buid Docker Image'
-                    docker build -t abhishekf5/ultimate-cicd:123 -f python-jenkins-argocd-k8s/Dockerfile .
+                    docker build -t karthikpuvvada/ultimate-cicd:123 -f python-jenkins-argocd-k8s/Dockerfile .
                     '''
                 }
             }
@@ -31,7 +31,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'Push to Repo'
-                    docker push abhishekf5/ultimate-cicd:123
+                    docker push karthikpuvvada/ultimate-cicd:123
                     '''
                 }
             }
