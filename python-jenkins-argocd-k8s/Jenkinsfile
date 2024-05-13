@@ -26,16 +26,7 @@ pipeline {
             }
         }
 
-        stage('Push the artifacts'){
-           steps{
-                script{
-                    sh '''
-                    echo 'Push to Repo'
-                    docker push karthikpuvvada/ultimate-cicd:123
-                    '''
-                }
-            }
-        }
+
         
         stage('Checkout K8S manifest SCM'){
             steps {
