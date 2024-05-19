@@ -36,6 +36,17 @@ pipeline {
                 }
             }
         }
+
+        stage('Delete the images created'){
+           steps{
+                script{
+                    sh '''
+                    echo 'Deleting images'
+                    docker rmi $(docker images -a -q)
+                    '''
+                }
+            }
+        }
         
         stage('Checkout K8S manifest SCM'){
             steps {
